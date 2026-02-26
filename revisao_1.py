@@ -15,7 +15,7 @@ print(a ** b)       #Potenciação
 print(a ** 0.5)     #Raiz quadrada
 print(math.sqrt(9)) #Raiz quadrada com biblioteca
 
-#Operadores Lógicos
+#Operadores Lógicos e relacionais
 print(a > b)            #Maior
 print(a >= b)           #Maior ou igual
 print(a < b)            #Menor
@@ -24,6 +24,8 @@ print(a == b)           #Igual
 print(a != b)           #Diferente
 print(a > b and a > 0)  #E(and)
 print(a > b or a < 0)   #Ou(or)
+print(a > b ^ a < 0)    #EOu(xor)
+
 '''
 
 '''
@@ -57,6 +59,8 @@ match fruta:
     case defaut:
         print("Cor indisponível")
 '''
+
+'''
 # Recebe 10 numeros com input e faz o somatório de todos
 
 soma = 0
@@ -71,5 +75,15 @@ media = soma/repeticoes
 print("A média de todos os números é:",media)
 
 
-#print("Número: "+str(i))  # Concatenação com + (necessário converterpara string)
-#print("Número:",i)   # Concatenação com ,(adiciona espaço)
+#print("Número: "+str(i))   # Concatenação com + (necessário converterpara string)
+#print("Número:",i)         # Concatenação com ,(adiciona espaço)
+'''
+
+from time import sleep
+
+contador = 0
+
+while contador <= 60:
+    print(f"Contador: {contador}")
+    contador += 1
+    sleep(1)
