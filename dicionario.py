@@ -1,6 +1,6 @@
 # Estruturas de dados lineares
 # Dicionário {}
-
+'''
 dic_vazio = {}
 dic_vazio_2 = dict()
 
@@ -26,3 +26,12 @@ chaves = ["id","status","taxa_acerto"]
 valores = [101,"ativo",0.95]
 modelo_IA = dict(zip(chaves,valores))
 print(modelo_IA)
+'''
+
+# Adicionar e modificar valores
+perfil_gamificacao = {"usuario":"ninja", "pontos":500}
+perfil_gamificacao["nivel"] = "Senior" # Nova chave com valor
+perfil_gamificacao["pontos"] = 550     # Novo valor para chave existente
+perfil_gamificacao.update(
+    {"pontos":1000, "ultimoLogin": "12-03-26","nivel": "Mestre"})
+print(perfil_gamificacao)
