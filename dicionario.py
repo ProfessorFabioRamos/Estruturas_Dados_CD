@@ -84,3 +84,51 @@ for mes,fatu in faturamento.items():   # Iteração no par chave/valor
     print(f"No mês {mes} o valor foi {fatu}")
 '''
 
+'''
+# Dicionário aninhado , similar a json
+banco_de_dados = {
+    "cliente_1":{
+        "nome": "Ana",
+        "compras": ["Livro", "Caneta"]
+    },
+    "cliente_2":{
+        "nome": "Bruno",
+        "compras": ["Caderno", "Tesoura"]
+    },
+    "cliente_3":{
+        "nome": "Caio",
+        "compras": ["Borracha", "Livro"]
+    }
+}
+primeira_compra_ana =  banco_de_dados["cliente_1"]["compras"][0]
+print(primeira_compra_ana)
+compras_bruno = banco_de_dados["cliente_2"]["compras"]
+print(compras_bruno)
+nome_cliente_3 = banco_de_dados["cliente_3"]["nome"]
+print(nome_cliente_3)
+'''
+
+'''
+# Mesclar dicionários
+dict1 = {"a":1, "b":2, "c":3}
+dict2 = {"d":4, "e":5, "f":6}
+
+# | Mescla dicionários a partir do Python 3.9
+dict3 = dict1 | dict2  
+print(dict3)
+
+# Versão antiga de mesclagem
+dict4 = {**dict1,**dict2}
+print(dict4)
+'''
+
+# Operação/Compreensão em dicionários
+numeros = [1,2,3,4,5,6,7,8,9]
+quadrados = {x:x**2 for x in numeros} # x é a chave e valor é a potência de x
+print(quadrados)
+
+salarios = {"João":3000, "Maria": 6000, "Pedro":4500}
+novos_salarios = {
+    nome:valor *1.1 for nome,valor in salarios.items() if valor < 5000
+}
+print(novos_salarios)
