@@ -47,6 +47,7 @@ print(f"Media por coluna:{media_coluna}\nMedia por linha:{media_linha}")
 import numpy as np
 # pip install matplotlib
 import matplotlib.pyplot as plt
+from PIL import Image
 
 # 0 -preto, 255 -branco
 # 16 linhas x 16 colunas
@@ -72,3 +73,6 @@ matriz_imagem = np.array([
 plt.imshow(matriz_imagem, cmap = 'gray', vmin=0,vmax=255)
 plt.title("Mario Mushroom")
 plt.show()
+
+imagem = Image.fromarray(matriz_imagem,mode = 'L')
+imagem.save("Mario_Mushroom.png")
